@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--yha me html paga bana dunga fir isse index.ejs me a tag se link kr dunga-->
+<body>
+    <h2>edit your thoughts here </h2>
+    
+        <p> post id : <%= sahi.id %> </p>
+        <p> username : <%= sahi.usernames %>  </p>
+    <form method="post" action="/post/<%=sahi.id%>?_method= PATCH">
+        <textarea >
+           <%= sahi.content %> 
+        </textarea>
+        <button>sumbit </button>
+    </form>
+
+    <!--html sirf get ya post req bhej sakte h patch ya delete api bhejneke liye hame ek extension down krna hoga -->
+</body>
+</html>

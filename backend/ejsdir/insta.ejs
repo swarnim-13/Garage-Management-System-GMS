@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--dekh ejs tag ke andr mene username likha h ye catch hoga user jo bhi dalega usse mere js ka code dekh-->
+    <h2>ye insta account @ <%= username %></h2>
+    <button>follow</button>
+    <button>message</button>
+
+    <!--loop dekh-->
+    <h3>these person follows you</h3>
+    <ul>
+        <% for (let name of followers) { %> <!--ye for of loop h js ka let var of str-->
+            <li><%= name %> </li>
+        <% } %>
+    </ul>
+</body>
+</html>

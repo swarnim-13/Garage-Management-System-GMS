@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>ok you want to edit this user : <%=user.email%> </h2>
+    <form method="post" action="/user/<%=user.id%>?_method=PATCH">  <!--vhi method-override pakage install kra ye koi si bhi req ko tranform kr deta h jisme bolo usme -->
+
+    <textarea name="username"> <%=user.username%> </textarea>
+    <input type="password" name="PASSWORD" placeholder="enter password">
+    <button>edit</button>
+    </form>
+</body>
+</html>

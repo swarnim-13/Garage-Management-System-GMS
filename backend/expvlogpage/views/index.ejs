@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ye ek ejs file h isme me ejs ke tag use krunga or fir iss file ko render kra dunga -->
+     <h1>wellvome to swar blogs</h1>
+     <% for (posts of post){ %>
+       <div class="likha"> <!--for of loop h posts nam ka val h or string ya array h post thike-->
+        <h3 class="user"> @ <%= posts.usernames %> </h3> <!--posts name ke variable me jo username mene diya h vo a jye-->
+        <h4 class="baat"> <%= posts.content %> </h4>
+        </div>
+        <br>
+       <a href="http://localhost:3000/post/aa/edit"> edit thought</a>
+       <!--yha pe me sahi.id use krke specific post ko edit ya uski detail dekh sakta hu but mene jo sahi naam ka variable banaya tha vo dikkat de rha h-->
+        <a href="http://localhost:3000/post/3aaa"> detail info </a>
+       
+
+        <!--delete post ka ek button banayte h or usse method-overide package ki help se delete api pe bhj denge-->
+        <form method="post" action="/post/a/?_method =DELETE">
+             <button>delete</button>
+        </form>
+        <!--fir vhi muje a name ki id hi dlt krwani padegi user jo chahe uske liye sahi.id likhdu but vhi undefined-->
+     <% } %>
+     <br> </br>
+     <!--banda direct yhi click krke new post vale pe pahuch jaye usse upper search bar se na jana pade-->
+     <a href="http://localhost:3000/post/new"> create new thought</a>
+     
+     </body>
+</html>
